@@ -1,4 +1,9 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from "react-router-dom";
 
 class Head extends Component {
   constructor(props) {
@@ -7,7 +12,11 @@ class Head extends Component {
   }
   render() {
     return (
-      <div></div>
+      <div>
+        <Router>
+          
+        </Router>
+      </div>
     );
   }
 }
