@@ -4,11 +4,6 @@ import 'antd/dist/antd.css'
 
 const { Panel } = Collapse;
 
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
 
 const customPanelStyle = {
   background: 'gry',
@@ -18,6 +13,10 @@ const customPanelStyle = {
   overflow: 'hidden',
 };
 
+const listItem = {
+  fontSize: '0.16rem'
+}
+
 const string = `
 test string
 `
@@ -26,7 +25,25 @@ console.log(string)
 class Card extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      list: [
+        {
+          title: "标题",
+          summary: "摘要内容",
+          url: "https://www.baidu.com"
+        },
+        {
+          title: "标题",
+          summary: "摘要内容",
+          url: "https://www.baidu.com"
+        },
+        {
+          title: "标题",
+          summary: "摘要内容",
+          url: "https://www.baidu.com"
+        },
+      ]
+    }
   }
   render() {
     return (
@@ -37,19 +54,18 @@ class Card extends React.Component {
           expandIconPosition="right"
           expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
         >
-          <Panel header={string} key="1" style={customPanelStyle} >
-            <a href="https://www.baidu.com">
-              <p>{text}</p>
-            </a>
-          </Panel>
-          <Panel header="This is panel header 2" key="2" style={customPanelStyle} showArrow={false}>
-            <p>{text}</p>
-          </Panel>
-          <Panel header="This is panel header 3" key="3" style={customPanelStyle} showArrow={false}>
-            <p>{text}</p>
-          </Panel>
-        </Collapse>,
-        mountNode,
+          {
+            this.state.list.map((item, index) => {
+              return (
+                <Panel header={item.title} key="1" style={customPanelStyle} style={listItem} key={index + 1}>
+                  <a href="https://www.baidu.com">
+                    <p>{item.summary}</p>
+                  </a>
+                </Panel>
+              )
+            })
+          }
+        </Collapse>
       </div>
     );
   }
