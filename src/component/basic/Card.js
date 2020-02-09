@@ -14,7 +14,7 @@ const customPanelStyle = {
 };
 
 const listItem = {
-  fontSize: '0.16rem'
+  fontSize: '0.14rem'
 }
 
 const string = `

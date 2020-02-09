@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <Head></Head>
+      <hr></hr>
       <Card></Card>
       <Router>
         <Switch>

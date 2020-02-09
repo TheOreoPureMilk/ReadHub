@@ -3,6 +3,8 @@ import {
   BrowserRouter as Router,
   Link
 } from "react-router-dom";
+import '../assets/css/Head.css'
+
 
 class Head extends React.Component {
   constructor(props) {
@@ -21,20 +23,23 @@ class Head extends React.Component {
               </img>
             </Link>
           </div>
-          <div>
-            <Link to="/topics">
-              热门话题
+          <br></br>
+          <div className="list-content">
+            <div>
+              <Link to="/topics" className="head-link">
+                热门话题
             </Link>
-          </div>
-          <div>
-            <Link to="/news">
-              科技动态
+            </div>
+            <div>
+              <Link to="/news" className="head-link">
+                科技动态
             </Link>
-          </div>
-          <div>
-            <Link to="/tech">
-              开发者资讯
+            </div>
+            <div>
+              <Link to="/tech" className="head-link">
+                开发者资讯
             </Link>
+            </div>
           </div>
         </Router>
       </div>
