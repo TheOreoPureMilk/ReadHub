@@ -8,13 +8,11 @@ class Topic extends React.Component {
     this.state = {}
   }
   componentDidMount() {
-    const url = 'https://api.readhub.cn/topic'
+    const url = '/topic'
     const lastCursor = 'lastCursor='
     const itemNumber = 'pageSize='
-    setTimeout((url) => {
-      axios.get(url + '?' + itemNumber + '6' + '&' + lastCursor)
-    }, 500)
-      .then((res) => { console.log(res) });
+    axios.get(url + '?' + itemNumber + '6' + '&' + lastCursor)
+      .then((res) => { console.log(res.data.data) })
   }
 
   render() {
@@ -26,4 +24,4 @@ class Topic extends React.Component {
   }
 }
 
-export default Topic; React.
+export default Topic;
