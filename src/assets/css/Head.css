@@ -1,0 +1,13 @@
+.list-content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.14rem;
+}
+
+.head-link {
+  color: gray;
+}
+
+.head-link:hover {
+  color: gray;
+}

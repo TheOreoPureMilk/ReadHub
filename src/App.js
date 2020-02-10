@@ -17,7 +17,7 @@ function App() {
       <Card></Card>
       <Router>
         <Switch>
-          <Route exact path="/topics">
+          <Route exact path="/">
 
           </Route>
           <Route path="/news">

@@ -16,7 +16,7 @@ class Head extends React.Component {
       <div>
         <Router>
           <div>
-            <Link to="/topics">
+            <Link to="/">
               <img
                 src="https://cdn.readhub.cn/static/assets/png/readhub_logo_m@2x.78b35cd0.png"
               >
@@ -26,7 +26,7 @@ class Head extends React.Component {
           <br></br>
           <div className="list-content">
             <div>
-              <Link to="/topics" className="head-link">
+              <Link to="/" className="head-link">
                 热门话题
             </Link>
             </div>
