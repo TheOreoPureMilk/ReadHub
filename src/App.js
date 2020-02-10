@@ -1,6 +1,5 @@
 import React from 'react';
 import './assets/css/App.css';
-import Card from './component/basic/Card';
 import Head from './component/Head'
 import Topic from './component/Topic'
 
@@ -14,8 +13,6 @@ function App() {
   return (
     <div className="App">
       <Head></Head>
-      <hr></hr>
-      <Card></Card>
       <hr></hr>
       <Router>
         <Switch>
