@@ -2,7 +2,8 @@ import React from 'react';
 import './assets/css/App.css';
 import Head from './component/Head'
 import Topic from './component/Topic'
-
+import Tech from './component/Tech'
+import News from './component/News'
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,11 +20,11 @@ function App() {
           <Route exact path="/">
             <Topic></Topic>
           </Route>
-          <Route path="/news">
-
+          <Route exact path="/news">
+            <News></News>
           </Route>
-          <Route path="/tech">
-
+          <Route exact path="/tech">
+            <Tech></Tech>
           </Route>
         </Switch>
       </Router>

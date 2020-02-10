@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './basic/Card'
 import axios from 'axios'
 
-class Topic extends React.Component {
+class Tech extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,7 +14,7 @@ class Topic extends React.Component {
     const lastCursor = 'lastCursor='
     const itemNumber = 'pageSize='
     const that = this
-    axios.get(url + '?' + itemNumber + '6' + '&' + lastCursor)
+    axios.get(url + '?' + itemNumber + '16' + '&' + lastCursor)
       .then((res) => {
         console.log(res.data.data)
         that.setState({
@@ -32,4 +32,4 @@ class Topic extends React.Component {
   }
 }
 
-export default Topic;
+export default Tech;

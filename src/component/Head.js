@@ -16,29 +16,29 @@ class Head extends React.Component {
       <div>
         <Router>
           <div>
-            <Link to="/">
+            <a href="/">
               <img
                 src="https://cdn.readhub.cn/static/assets/png/readhub_logo_m@2x.78b35cd0.png"
               >
               </img>
-            </Link>
+            </a>
           </div>
           <br></br>
           <div className="list-content">
             <div>
-              <Link to="/" className="head-link">
+              <a href="/" className="head-link">
                 热门话题
-            </Link>
+              </a>
             </div>
             <div>
-              <Link to="/news" className="head-link">
+              <a href="/news" className="head-link">
                 科技动态
-            </Link>
+              </a>
             </div>
             <div>
-              <Link to="/tech" className="head-link">
+              <a href="/tech" className="head-link">
                 开发者资讯
-            </Link>
+              </a>
             </div>
           </div>
         </Router>

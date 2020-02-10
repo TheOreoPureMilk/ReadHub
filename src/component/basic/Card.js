@@ -35,7 +35,7 @@ class Card extends React.Component {
             this.props.data.map((item, index) => {
               return (
                 <Panel header={item.title} key="1" style={customPanelStyle} style={listItem} key={index + 1}>
-                  <a style={customPanelStyle} href="https://www.baidu.com">
+                  <a style={customPanelStyle} href={item.url}>
                     <p>{item.summary}</p>
                   </a>
                 </Panel>
