@@ -2,6 +2,7 @@ import React from 'react';
 import './assets/css/App.css';
 import Card from './component/basic/Card';
 import Head from './component/Head'
+import Topic from './component/Topic'
 
 import {
   BrowserRouter as Router,
@@ -15,10 +16,11 @@ function App() {
       <Head></Head>
       <hr></hr>
       <Card></Card>
+      <hr></hr>
       <Router>
         <Switch>
           <Route exact path="/">
-
+            <Topic></Topic>
           </Route>
           <Route path="/news">
 
