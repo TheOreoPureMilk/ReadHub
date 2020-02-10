@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Collapse, Icon } from 'antd';
 import React from 'react'
 import 'antd/dist/antd.css'

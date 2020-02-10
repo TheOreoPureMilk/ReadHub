@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import Card from './basic/CardTopic'
 import axios from 'axios'
