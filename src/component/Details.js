@@ -1,15 +1,48 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
+import axios from 'axios'
+
+import { useParams } from 'react-router-dom'
+
+
+function Details() {
+  let { id } = useParams();
+  let url = 'topic'
+  let [data, setdata] = useState({})
+  useEffect(() => {
+    axios.get(url + '/' + id)
+      .then((res) => {
+        console.log(res.data)
+        setdata(res.data)
+      }).catch((err) => {
+        console.log(err)
+      })
+  })
+  return (
+    <div>
+      <p>{data.title}</p>
+      <hr></hr>
+      <p>{data.summary}</p>
+    </div>
+  );
+}
+/*
+let id = useParams()
 
 class Details extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      id: String
+    }
   }
-  render() { 
+  componentDidMount() {
+    
+  }
+  render() {
     return (
-      <div></div>
+      <div>yes</div>
     );
   }
 }
- 
+*/
 export default Details;

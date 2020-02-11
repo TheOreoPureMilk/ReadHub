@@ -4,6 +4,8 @@ import Head from './component/Head'
 import Topic from './component/Topic'
 import Tech from './component/Tech'
 import News from './component/News'
+import Details from './component/Details'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Head></Head>
-      <hr></hr>
+      <hr className="Hr"></hr>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -26,6 +28,7 @@ function App() {
           <Route exact path="/tech">
             <Tech></Tech>
           </Route>
+          <Route exact path="/:id" children={<Details />}></Route>
         </Switch>
       </Router>
     </div>
