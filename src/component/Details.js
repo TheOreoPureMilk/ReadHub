@@ -2,19 +2,21 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import '../assets/css/Details.css'
 import { useParams } from 'react-router-dom'
+import Meta from "./basic/Meta"
 
 
 function Details() {
   let { id } = useParams();
   let url = 'topic'
   let [data, setdata] = useState({})
-  let [news, setnews] = useState({})
+  let [news, setnews] = useState([])
   useEffect(() => {
     axios.get(url + '/' + id)
       .then((res) => {
+        console.log(res.data)
         console.log(res.data.newsArray)
         setdata(res.data)
-        setnews(res.data.newsArray[0])
+        setnews(res.data.newsArray)
       }).catch((err) => {
         console.log(err)
       })
@@ -28,11 +30,14 @@ function Details() {
         {data.summary}
       </p>
       <hr className="more-next"></hr>
-      <a href={news.url}>
-        <p className="meta-info">媒体报道</p>
-        <p className="news-title">{news.title}</p>
-        <p className="news-from">{news.siteName}</p>
-      </a>
+      <p className="meta-info">媒体报道</p>
+      {
+        news.map((item, index) => {
+          return (<Meta news={item} key={index}></Meta>)
+        })
+      }
+      <br></br>
+      <p className="meta-info">相关事件</p>
     </div>
   );
 }
