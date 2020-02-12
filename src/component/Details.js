@@ -3,7 +3,7 @@ import axios from 'axios'
 import '../assets/css/Details.css'
 import { useParams } from 'react-router-dom'
 import Meta from "./basic/Meta"
-
+import Timeline from "./basic/Timeline"
 
 function Details() {
   let { id } = useParams();
@@ -38,6 +38,7 @@ function Details() {
       }
       <br></br>
       <p className="meta-info">相关事件</p>
+      <Timeline more={data.timeline.topics}></Timeline>
     </div>
   );
 }
