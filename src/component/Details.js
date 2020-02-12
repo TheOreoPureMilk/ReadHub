@@ -28,8 +28,11 @@ function Details() {
         {data.summary}
       </p>
       <hr className="more-next"></hr>
-      <p className="meta-info">媒体报道</p>
-      <p className="news-title">{news.title}</p>
+      <a href={news.url}>
+        <p className="meta-info">媒体报道</p>
+        <p className="news-title">{news.title}</p>
+        <p className="news-from">{news.siteName}</p>
+      </a>
     </div>
   );
 }
