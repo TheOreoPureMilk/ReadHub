@@ -1,4 +1,6 @@
 import React from 'react';
+import '../../assets/css/Timeline.css'
+
 
 function Timeline(props) {
 
@@ -6,12 +8,14 @@ function Timeline(props) {
     <div>
       <ul>
         {
-          props.more.map((item, index) => {
+          props.more.map((item) => {
             return (
-              <a href={`/${item.id}`} key={index}>
-                <div className="item-time">item.creatAt.substr(0,10)</div>
-                <div className="item-title"></div>
-              </a>
+              <li key={item.id}>
+                <a href={`/${item.id}`} >
+                  <div className="item-time">{item.createdAt.substring(0,10)}</div>
+                  <div className="item-title">{item.title}</div>
+                </a>
+              </li>
             )
           })
         }

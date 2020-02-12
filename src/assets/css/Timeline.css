@@ -1,0 +1,13 @@
+.item-time {
+  height: .13rem;
+  padding: 0 .1rem;
+  font-size: .13rem;
+  color: rgb(133, 128, 128);
+  margin-bottom: 4px;
+}
+
+.item-title {
+  font-size: 0.16rem;
+  padding: 0 0.1rem;
+  color: rgb(53, 51, 51);
+}

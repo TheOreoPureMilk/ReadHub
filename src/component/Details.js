@@ -10,13 +10,14 @@ function Details() {
   let url = 'topic'
   let [data, setdata] = useState({})
   let [news, setnews] = useState([])
+  let [topic, settopics] = useState([])
+
   useEffect(() => {
     axios.get(url + '/' + id)
       .then((res) => {
-        console.log(res.data)
-        console.log(res.data.newsArray)
         setdata(res.data)
         setnews(res.data.newsArray)
+        settopics(res.data.timeline.topics)
       }).catch((err) => {
         console.log(err)
       })
@@ -38,7 +39,7 @@ function Details() {
       }
       <br></br>
       <p className="meta-info">相关事件</p>
-      <Timeline more={data.timeline.topics}></Timeline>
+      <Timeline more={topic}></Timeline>
     </div>
   );
 }
