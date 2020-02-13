@@ -28,7 +28,7 @@ function App() {
           <Route exact path="/tech">
             <Tech></Tech>
           </Route>
-          <Route exact path="/topic/:id" children={<Details />}></Route>
+          <Route exact path="/topics/:id" children={<Details />}></Route>
         </Switch>
       </Router>
     </div>

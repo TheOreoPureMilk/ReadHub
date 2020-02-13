@@ -12,7 +12,7 @@ function Details() {
   let [topic, settopics] = useState([])
   // eslint-disable-next-line
   useEffect(() => {
-    axios.get('./' + id)
+    axios.get('../' + '/topic/' + id)
       .then((res) => {
         setdata(res.data)
         setnews(res.data.newsArray)
