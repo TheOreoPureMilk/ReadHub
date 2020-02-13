@@ -24,7 +24,7 @@ function Details() {
   return (
     <div>
       <p className="detail-title">
-        · {data.title} ·
+        · {data.title}
       </p>
       <p className="detail-summary">
         {data.summary}
