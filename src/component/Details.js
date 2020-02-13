@@ -7,13 +7,12 @@ import Timeline from "./basic/Timeline"
 
 function Details() {
   let { id } = useParams();
-  let url = 'topic'
   let [data, setdata] = useState({})
   let [news, setnews] = useState([])
   let [topic, settopics] = useState([])
-// eslint-disable-next-line
+  // eslint-disable-next-line
   useEffect(() => {
-    axios.get(url + '/' + id)
+    axios.get('./' + id)
       .then((res) => {
         setdata(res.data)
         setnews(res.data.newsArray)
