@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/">
             <Topic></Topic>
           </Route>
-          <Route exact path="/news">
+          <Route exact path="/new">
             <News></News>
           </Route>
           <Route exact path="/tech">

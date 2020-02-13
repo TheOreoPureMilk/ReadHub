@@ -27,7 +27,7 @@ class Head extends React.Component {
               </a>
           </div>
           <div>
-            <a href="/news" className="head-link">
+            <a href="/new" className="head-link">
               科技动态
               </a>
           </div>
