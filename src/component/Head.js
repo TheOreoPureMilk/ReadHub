@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/css/Head.css'
-
+import { Link } from "react-router-dom"
 
 class Head extends React.Component {
   constructor(props) {
@@ -11,30 +11,30 @@ class Head extends React.Component {
     return (
       <div>
         <div>
-          <a href="/">
+          <Link to="/">
             <img
               alt="图标"
               src="https://cdn.readhub.cn/static/assets/png/readhub_logo_m@2x.78b35cd0.png"
             >
             </img>
-          </a>
+          </Link>
         </div>
         <br></br>
         <div className="list-content">
           <div>
-            <a href="/" className="head-link">
+            <Link to="/" className="head-link">
               热门话题
-              </a>
+              </Link>
           </div>
           <div>
-            <a href="/new" className="head-link">
+            <Link to="/new" className="head-link">
               科技动态
-              </a>
+              </Link>
           </div>
           <div>
-            <a href="/tech" className="head-link">
+            <Link to="/tech" className="head-link">
               开发者资讯
-              </a>
+              </Link>
           </div>
         </div>
       </div>

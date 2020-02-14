@@ -2,6 +2,7 @@
 import { Collapse, Icon } from 'antd';
 import React from 'react'
 import 'antd/dist/antd.css'
+import {Link} from "react-router-dom"
 
 const { Panel } = Collapse;
 
@@ -36,9 +37,9 @@ class Card extends React.Component {
             this.props.data.map((item, index) => {
               return (
                 <Panel header={item.title} key="1" style={customPanelStyle} style={listItem} key={index + 1}>
-                  <a style={customPanelStyle} href={`/topics/${item.id}`}>
+                  <Link style={customPanelStyle} to={`/topics/${item.id}`}>
                     <p>{item.summary}</p>
-                  </a>
+                  </Link>
                 </Panel>
               )
             })

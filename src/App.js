@@ -7,7 +7,7 @@ import News from './component/News'
 import Details from './component/Details'
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
@@ -15,17 +15,20 @@ import {
 function App() {
   return (
     <div className="App">
-      <Head></Head>
-      <hr className="Hr"></hr>
+
+
+
       <Router>
+        <Head></Head>
+        <hr className="Hr"></hr>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/" >
             <Topic></Topic>
           </Route>
-          <Route exact path="/new">
+          <Route exact path="/new" >
             <News></News>
           </Route>
-          <Route exact path="/tech">
+          <Route exact path="/tech" >
             <Tech></Tech>
           </Route>
           <Route exact path="/topics/:id" children={<Details />}></Route>
